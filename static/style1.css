@@ -1,0 +1,77 @@
+
+h2.pagetitle {
+    font-size: 25px;
+    line-height: 18px;
+    font-weight: normal;
+    border-bottom: solid 1px #d0c1c1;
+    padding: 15px 0px;
+    margin-top: 0px;
+    color: #000066;
+	padding:10px;
+}
+p
+{
+	line-height:2em;
+	font-size:18px;
+	padding:10px;
+}
+table tr td
+{
+	font-size:17px;
+	color:#333;
+}
+input[type="text"],input[type="password"],select
+{
+	width:320px;
+	height:35px;
+	border:1px solid #ccc;
+}
+input[type="submit"]
+{
+	width:120px;
+	height:35px;
+	background:#F3C055;
+	border:none;
+	color:white;
+	font-size:15px;
+}
+textarea
+{
+	width:320px;
+	height:85px;
+	border:1px solid #ccc;
+}
+a.btn
+{
+
+	background:#F3C055;
+	border:none;
+	color:white;
+	font-size:15px;
+	padding:10px;
+	margin:10px;
+}
+.img-size
+{
+	width:150px;
+	height:150px;
+	border-radius:360px;
+}
+h2.pagetitle1 {
+    font-size: 25px;
+    line-height: 18px;
+    font-weight: normal;
+    border-bottom: solid 1px #d0c1c1;
+    padding: 15px 0px;
+    margin-top: 0px;
+    color: red;
+	padding:10px;
+}
+.red
+{
+	color:red;
+}
+tr.color
+{
+	background:red;
+}

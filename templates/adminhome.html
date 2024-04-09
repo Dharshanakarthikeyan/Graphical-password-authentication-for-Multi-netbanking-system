@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<title>GPWD</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="../static/style.css" />
+<link rel="stylesheet" type="text/css" href="../static/style1.css" />
+<!-- CuFon ends -->
+
+  <script language="javascript">
+  function validate()
+  {
+  	if(document.form1.uname.value=="")
+	{
+	alert("Enter the Username");
+	document.form1.uname.focus();
+	return false;
+	}
+	if(document.form1.pass.value=="")
+	{
+	alert("Enter the Password");
+	document.form1.pass.focus();
+	return false;
+	}
+return true;
+  }
+  </script>
+</head>
+<body>
+<div id="bgcontainer">
+  <div class="Header">
+    <div class="Syn">
+      <ul>
+
+      </ul>
+    </div>
+    <div class="Logo">
+      <div class="LogoText">
+        <h1><a href="#" style="font-size:28px; color:black;">Multi Net Banking</a></h1> </div>
+      <p class="Desc"></p>
+    </div>
+    <div class="Menu">
+
+    &nbsp; &nbsp;  <a style="color:white;" href="{{ url_for('add')}}">Home</a>
+
+	 &nbsp; &nbsp;	  <a  style="color:white;" href="{{ url_for('add')}}">Add Manager</a>
+		 &nbsp; &nbsp;	 <a style="color:white; " href="{{ url_for('a_view_mgr')}}">View Manager</a>
+
+      &nbsp; &nbsp;   <a style="color:white;" href="{{ url_for('adminhome')}}">Bank List</a>
+	 &nbsp; &nbsp;	  <a style="color:white;" href="{{ url_for('logout')}}">Logout</a>
+
+    </div>
+
+    <div class="clr"></div>
+  </div>
+  <div class="CON">
+          <h2 align="center">Bank List</h2>
+      <center>    <table width="612" border="1" >
+            <tr style="background:EFEFEF; color:black;">
+              <th width="144">Bank</th>
+              <th width="142">Branch</th>
+			       <th width="142">IFSC Code</th>
+            </tr>
+             {% for colour in colour %}
+                <tr>
+                    <td>{{colour[0]}}</td>
+                    <td>{{colour[1]}}</td>
+
+                    <td>{{colour[2]}}</td>
+                </tr>
+                {% endfor %}
+          </table></center>
+
+          <p align="center">{{ msg }}</p>
+
+
+      <center>&copy;Online Banking </center>
+</div>
+</div>
+
+</body>
+</html>

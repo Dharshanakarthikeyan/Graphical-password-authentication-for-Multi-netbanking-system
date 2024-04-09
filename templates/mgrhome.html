@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<title>GPWD</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="../static/style.css" />
+<link rel="stylesheet" type="text/css" href="../static/style1.css" />
+<!-- CuFon ends -->
+
+ <script language="javascript">
+function validate()
+{
+	if (document.form1.branch.value == "")
+	{
+		alert("Enter the Branch Name");
+		document.form1.branch.focus();
+		return false;
+	}
+	if (document.form1.account.value == "")
+	{
+		alert("Enter the Account No.");
+		document.form1.account.focus();
+		return false;
+	}
+return true;
+}
+</script>
+</head>
+<body>
+<div id="bgcontainer">
+  <div class="Header">
+    <div class="Syn">
+      <ul>
+
+      </ul>
+    </div>
+    <div class="Logo">
+      <div class="LogoText">
+       <h1><a href="#" style="font-size:28px; color:black;">Multi Net Banking</a></h1> </div>
+      <p class="Desc"></p>
+    </div>
+    <div class="Menu">
+    &nbsp; &nbsp;  <a style="color:white;" href="{{ url_for('mgrhome')}}">Home</a>
+
+	 &nbsp; &nbsp;	  <a style="color:white;" href="{{ url_for('logout')}}">Logout</a>
+
+    </div>
+
+    <div class="clr"></div>
+  </div>
+  <div class="CON">
+
+
+     <h2 align="center"><span> Customer Details </span></h2>
+
+        <center>   <form action="mactivate" method="post" autocomplete="off">
+          <input type="text" name="account"  />
+          <input type="submit" value="Activate" name="s1"/>
+          </form>
+        {{msg}}
+            <br/>
+  <br/>
+            <table width="875" border="1">
+            <tr>
+              <th width="37" scope="row">ID</th>
+              <th width="59">Name </th>
+              <th width="52">Bank</th>
+              <th width="99">Branch</th>
+              <th width="170">Account No </th>
+
+              <th width="170">Status </th>
+            </tr>
+
+            <tr>
+
+            {% for colour in colour %}
+                <tr>
+                    <td>{{colour[0]}}</td>
+                    <td>{{colour[1]}}</td>
+
+                    <td>{{colour[2]}}</td>
+                    <td>{{colour[3]}}</td>
+
+                    <td>{{colour[4]}}</td>
+   <td>{{colour[6]}}</td>
+
+                </tr>
+                {% endfor %}
+            </tr>
+
+          </table>
+          <p align="center">&nbsp;</p>
+          <p align="center">&nbsp;</p></center>
+
+
+      <center>&copy;Online Banking </center>
+</div>
+</div>
+
+<script>
+    window.onload = function() {
+        var status = document.getElementById('status').value
+
+        if(status == "1") {
+            document.getElementById('authentic').style.display = 'none';
+        } else {
+            document.getElementById('authentic').style.display = 'block';
+        }
+    }
+</script>
+</body>
+</html>

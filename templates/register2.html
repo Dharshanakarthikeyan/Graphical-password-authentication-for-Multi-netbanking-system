@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<title>GPWD</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="../static/style.css" />
+<link rel="stylesheet" type="text/css" href="../static/style1.css" />
+
+</head>
+<body>
+<div id="bgcontainer">
+  <div class="Header">
+    <div class="Syn">
+      <ul>
+
+      </ul>
+    </div>
+    <div class="Logo">
+      <div class="LogoText">
+
+      <h1><a href="#" style="font-size:28px; color:black;">Multi Net Banking</a></h1></div>
+      <p class="Desc"></p>
+    </div>
+    <div class="Menu">
+      <ul>
+     <li><a style="color:white;" href="{{url_for('index')}}"><span>Home</span></a></li>
+        <li><a style="color:white;"href="{{url_for('login')}}"><span>Login</span></a></li>
+
+      </ul>
+    </div>
+
+    <div class="clr"></div>
+  </div>
+  <div class="CON" style="height:auto">
+
+		<h2 class="pagetitle">Choose Image Hotspot.. Step-2<br/><br/></h2>
+		<br/><br/><center>
+    		 <form action="{{ url_for('coordinate')}}" method="post" autocomplete="off">
+
+
+               <input type="text" name="uname" value="{{ uname }}" hidden>
+    <input type="text" id="x" name="x" hidden/><input type="text" id="y" name="y" hidden />
+<input type="submit"  name="btn" value="Register" onclick="validate()" />
+            </form>
+<br/><br/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<img src="{{ url_for('static', filename='../static/' + fname) }}"  height="600" width="600" alt="dragon">
+
+          <p align="center">{{ msg }}</p>
+
+
+		</center>
+      <div class="clearer"></div>
+
+
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>$(document).ready(function() {
+    $("img").on("click", function(event) {
+        var x = event.pageX - this.offsetLeft;
+        var y = event.pageY - this.offsetTop;
+        alert("X Coordinate: " + x + " Y Coordinate: " + y);
+document.getElementById('x').value=x;
+document.getElementById('y').value=y;
+    });
+});</script>
+
+
+</body>
+</html>

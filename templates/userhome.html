@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<title>GPWD</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="../static/style.css" />
+<link rel="stylesheet" type="text/css" href="../static/style1.css" />
+<script language="javascript">
+function validate()
+{
+	if (document.form1.branch.value == "")
+	{
+		alert("Enter the Branch Name");
+		document.form1.branch.focus();
+		return false;
+	}
+	if (document.form1.account.value == "")
+	{
+		alert("Enter the Account No.");
+		document.form1.account.focus();
+		return false;
+	}
+return true;
+}
+</script>
+</head>
+<body>
+<div id="bgcontainer">
+  <div class="Header">
+    <div class="Syn">
+      <ul>
+
+      </ul>
+    </div>
+    <div class="Logo">
+      <div class="LogoText">
+                <h1><a href="#" style="font-size:28px; color:black;">Multi Net Banking</a></h1> </div>
+      <p class="Desc"></p>
+    </div>
+    <div class="Menu">
+      <ul>
+    &nbsp; &nbsp;  	<a style="color:white;"href="{{ url_for('userhome0')}}">Home</a></li>
+
+        &nbsp; &nbsp;  	 <a style="color:white;"href="#">Logout</a>
+      </ul>
+    </div>
+ <input type="text" name1="uname" value="Welcome {{ uname }}" style="background:none; font-size:16px; border:0px; padding-left:10px; padding-top:120px;">
+<hr/>
+    <div class="clr"></div>
+  </div>
+  <div class="CON">
+
+
+   <h2 align="center"><span>Welcome</span> to Multi Banking System </h2>
+
+          <p align="center">
+		 <center>
+            <table width="1000" height="300">
+			<tr>
+				<td><a href="{{ url_for('b1', bank='Axis Bank') }}"><img src="../static/images/bank/axis.png" width="150" height="40"></a></td>
+			    <td><a href="{{ url_for('b2', bank='Bank Of India') }}"><img src="../static/images/bank/bankofindia.png" width="150" height="40"></a></td>
+				<td><a href="{{ url_for('b3', bank='Canara Bank') }}"><img src="../static/images/bank/canara.png" width="150" height="40"></a></td>
+				<td><a href="{{ url_for('b4', bank='Central bank') }}"><img src="../static/images/bank/centralbank.png" width="150" height="40"></a></td>
+				<td><a href="{{ url_for('b5', bank='Citi Bank') }}"><img src="../static/images/bank/citibank.png" width="150" height="40"></a></td>
+			</tr>
+			<tr>
+				<td><a href="{{ url_for('b6', bank='HDFC') }}"><img src="../static/images/bank/hdfc.png" width="150" height="40"></a></td>
+				<td><a href="{{ url_for('b7', bank='HSBC') }}"><img src="../static/images/bank/hsbc.png" width="150" height="40"></a></td>
+				<td><a href="{{ url_for('b8', bank='ICICI') }}"><img src="../static/images/bank/icici.png" width="150" height="40"></a></td>
+				<td><a href="{{ url_for('b9', bank='IDBI') }}"><img src="../static/images/bank/idbi.png" width="150" height="40"></a></td>
+				<td><a href="{{ url_for('b10', bank='IndusInd Bank') }}"><img src="../static/images/bank/indusbank.png" width="150" height="40"></a></td>
+
+			</tr>
+			<tr>
+				<td><a href="{{ url_for('b11', bank='SBI Bank') }}"><img src="../static/images/bank/sbi.png" width="150" height="40"></a></td>
+				<td><a href="{{ url_for('b12', bank='South Indian Bank') }}"><img src="../static/images/bank/southindia.png" width="150" height="40"></a></td>
+				<td><a href="{{ url_for('b13', bank='Union Bank') }}"><img src="../static/images/bank/unionbank.png" width="150" height="40"></a></td>
+				<td><a href="{{ url_for('b14', bank='Yes Bank') }}"><img src="../static/images/bank/yesbank.png" width="150" height="40"></a></td>
+
+
+            </tr>
+		  </table></center>
+
+		  </p>
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+
+</body>
+</html>

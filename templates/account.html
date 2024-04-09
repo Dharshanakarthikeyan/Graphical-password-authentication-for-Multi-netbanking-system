@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<title>Multi net banking</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="../static/style.css" />
+<link rel="stylesheet" type="text/css" href="../static/style1.css" />
+<script language="javascript">
+function validate()
+{
+	if (document.form1.branch.value == "")
+	{
+		alert("Enter the Branch Name");
+		document.form1.branch.focus();
+		return false;
+	}
+	if (document.form1.account.value == "")
+	{
+		alert("Enter the Account No.");
+		document.form1.account.focus();
+		return false;
+	}
+return true;
+}
+</script>
+</head>
+<body>
+<div id="bgcontainer">
+  <div class="Header">
+    <div class="Syn">
+      <ul>
+
+
+      </ul>
+    </div>
+    <div class="Logo">
+      <div class="LogoText">
+                <h1><a href="#">Multi Net Banking</a></h1>
+      </div>
+      <p class="Desc"></p>
+    </div>
+    <div class="Menu">
+         <ul>
+    &nbsp; &nbsp;  	<a style="color:white;" href="{{ url_for('userhome0')}}">Home</a></li>
+
+    &nbsp; &nbsp;  	<a style="color:white;" href="{{ url_for('accountdetails')}}">Account Details</a></li>
+    &nbsp; &nbsp;  	<a style="color:white;" href="{{ url_for('createaccount')}}">Create New Account </a></li>
+
+        &nbsp; &nbsp;  	 <a style="color:white;" href="{{ url_for('logout')}}">Logout</a>
+      </ul>
+    </div>
+ <input type="text" name1="uname" value="Welcome {{ uname }}" style="background:none; font-size:16px; border:0px; padding-left:10px; padding-top:120px;">
+<hr/>
+    <div class="clr"></div>
+  </div>
+  <div class="CON">
+<h2 align="center"><span>Account Creation </span></h2>
+ <form action="{{ url_for('createaccountcode')}}" method="post" autocomplete="off">
+          <table width="479" height="230" border="0" align="center" cellpadding="5">
+            <tr>
+              <td>Bank</td>
+              <td>
+                <select name="bank" method="GET" action="/">
+                    {% for rows in rows %}
+                        <option value="{{rows}}" SELECTED>{{rows}}</option>"
+                    {% endfor %}
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>IFSC Code </td>
+              <td>
+                <select name="ifsc" method="GET" action="/">
+                    {% for rows1 in rows1 %}
+                        <option value="{{rows1}}" SELECTED>{{rows1}}</option>"
+                    {% endfor %}
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Branch</td>
+              <td>
+                <select name="branch" method="GET" action="/">
+                    {% for rows2 in rows2 %}
+                        <option value="{{rows2}}" SELECTED>{{rows2}}</option>"
+                    {% endfor %}
+                </select>
+              </td>
+
+            </tr>
+            <tr>
+              <td>Account No </td>
+              <td><input type="text" name="accountenter" /></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td><input type="submit" name="btn" value="Create" onClick="return validate()" /></td>
+            </tr>
+          </table>{{msg}}
+          <p align="center">&nbsp;</p>
+          </div>
+
+
+   </form>
+
+
+
+
+
+
+
+  </div>
+</div>
+
+</body>
+</html>

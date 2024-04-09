@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<title>GPWD</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="../static/style.css" />
+<link rel="stylesheet" type="text/css" href="../static/style1.css" />
+<script language="javascript">
+function validate()
+{
+	if (document.form1.branch.value == "")
+	{
+		alert("Enter the Branch Name");
+		document.form1.branch.focus();
+		return false;
+	}
+	if (document.form1.account.value == "")
+	{
+		alert("Enter the Account No.");
+		document.form1.account.focus();
+		return false;
+	}
+return true;
+}
+</script>
+</head>
+<body>
+<div id="bgcontainer">
+  <div class="Header">
+    <div class="Syn">
+      <ul>
+
+      </ul>
+    </div>
+    <div class="Logo">
+      <div class="LogoText">
+                <h1><a href="#" style="font-size:28px; color:black;">Multi Net Banking</a></h1>
+      </div>
+      <p class="Desc"></p>
+    </div>
+    <div class="Menu">
+      <ul>
+    &nbsp; &nbsp;  	<a style="color:white;" href="{{ url_for('userhome0')}}">Home</a></li>
+
+    &nbsp; &nbsp;  	<a style="color:white;" href="{{ url_for('accountdetails')}}">Account Details</a></li>
+    &nbsp; &nbsp;  	<a style="color:white;" href="{{ url_for('createaccount')}}">Create New Account </a></li>
+
+        &nbsp; &nbsp;  	 <a style="color:white;" href="{{ url_for('logout')}}">Logout</a>
+      </ul>
+    </div>
+ <input type="text" name1="uname" value="Welcome {{ uname }}" style="background:none; font-size:16px; border:0px; padding-left:10px; padding-top:120px;">
+<hr/>
+    <div class="clr"></div>
+  </div>
+  <div class="CON">
+
+
+   <h2 align="center"><span>Welcome</span> Multi Net Banking System </h2>
+          <p>&nbsp;</p>
+          <p align="center"><img src="../static/images/bank-jobs.jpg" width="582" height="202" /></p>
+          <p align="center">&nbsp;</p>
+
+
+
+
+
+
+
+
+  </div>
+</div>
+
+</body>
+</html>
